@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lehur Moveis e Decorações</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header>
+			<div id="LogoMarca">	<%= image_tag("Lehur Moveis Descorações LogoMarca.png") %>	</div>
+		</header>
+
+		<h1 id="PositionMenuBar">
+		<ul id="MenuBar" class="topmenu">
+			<li class="topfirst">
+				<%= link_to "Lehur M.D.", root_path %>
+			</li>
+			<li class="topmenu">
+				<a href="#" style="height:18px;line-height:18px;"><span>Produtos</span></a>
+				<ul>
+					<li>
+						<a href="#">Cama</a>
+					</li>
+					<li>
+						<a href="#">Mesa</a>
+					</li>
+					<li>
+						<a href="#">Cadeira</a>
+					</li>
+				</ul>
+			</li>
+			<li class="topmenu">
+				<a href="#" style="height:18px;line-height:18px;">Sobre Lehur M.D.</a>
+			</li>
+			<li class="topmenu">
+				<a href="#" style="height:18px;line-height:18px;">Onde comprar</a>
+			</li>
+			<li class="topmenu">
+				<a href="#" style="height:18px;line-height:18px;">Responsabilidade Social</a>
+			</li>
+			<li class="topmenu">
+				<a href="#" style="height:18px;line-height:18px;">Orçamento</a>
+			</li>
+			<li class="topmenu">
+				<a href="#" style="height:18px;line-height:18px;">Contato</a>
+			</li>
+			<li class="toplast">
+				<% if current_user %>
+				<%= link_to "Deslogar", log_out_path %>
+			</li>
+			<li>
+				<%= link_to "Cadastrar", sign_up_path %>
+				<ul>
+					<li>
+						<a href="#">Produtos</a>
+					</li>
+					<li>
+						<a href="#">Funcionarios</a>
+					</li>
+					<li>
+						<a href="#">Sobre Lehur M.D.</a>
+					</li>
+					<li>
+						<a href="#">Onde comprar</a>
+					</li>
+					<li>
+						<a href="#">Responsabilidade Social</a>
+					</li>
+				</ul>
+				
+				<% else %>
+				<%= link_to "Logar", log_in_path %>
+				<% end %>
+			</li>
+		</ul></h1>
+
+		<div id="Main">
+			<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash_#{name}" %>
+			<% end %>
+
+			<%= yield %>
+		</div>
+
+		<footer>
+			<sub> © Lehur M.D. todos os direitos reservados. </sub>
+		</footer>
+	</body>
+</html>

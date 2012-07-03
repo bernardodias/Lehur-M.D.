@@ -1,0 +1,174 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+header {
+	text-align: center;
+	background-image: url("BackGroundHeader.jpg");
+	height: 162px;
+}
+
+body {
+	background-color: white;
+}
+
+div#Main {
+	width: 800px;
+	left: 50%;
+	margin-left: -400px;
+	position: absolute;
+	border: 1px solid black
+}
+
+footer {
+	position: absolute;
+	text-align: center;
+	bottom: 5px;
+	width: 99%;
+}
+
+h1 {
+	text-align: center;
+	vertical-align: middle;
+}
+
+ul#MenuBar, ul#MenuBar ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	background-color: #dedede;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #5f5f5f;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+ul#MenuBar ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	-moz-box-shadow: 3.5px 3.5px 5px #000000;
+	-webkit-box-shadow: 3.5px 3.5px 5px #000000;
+	box-shadow: 3.5px 3.5px 5px #000000;
+	background-color: #00ff00;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-color: #d4d4d4;
+	padding: 0 10px 10px;
+}
+ul#MenuBar li:hover > * {
+	display: block;
+}
+ul#MenuBar li {
+	position: relative;
+	display: block;
+	white-space: nowrap;
+	font-size: 0;
+	float: left;
+}
+ul#MenuBar li:hover {
+	z-index: 1;
+}
+ul#MenuBar {
+	font-size: 0;
+	z-index: 999;
+	position: relative;
+	display: inline-block;
+	zoom: 1;
+	padding: 0;
+	*display: inline;
+}
+* html ul#MenuBar li a {
+	display: inline-block;
+}
+ul#MenuBar > li {
+	margin: 0;
+}
+ul#MenuBar a:active, ul#MenuBar a:focus {
+	outline-style: none;
+}
+ul#MenuBar a {
+	display: block;
+	vertical-align: middle;
+	text-align: left;
+	text-decoration: none;
+	font: bold 14px Trebuchet MS;
+	color: #000000;
+	text-shadow: #FFF 0 0 1px;
+	cursor: pointer;
+	padding: 10px;
+	background-color: #00ff00;
+	background-image: url("mainbk.png");
+	background-repeat: repeat;
+	background-position: 0 0;
+	border-width: 0 0 0 1px;
+	border-style: solid;
+	border-color: #C0C0C0;
+}
+ul#MenuBar ul li {
+	float: none;
+	margin: 10px 0 0;
+}
+ul#MenuBar ul a {
+	text-align: left;
+	padding: 4px;
+	background-color: #00ff00;
+	background-image: none;
+	border-width: 0;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	font: 14px Tahoma;
+	color: #000;
+	text-decoration: none;
+}
+ul#MenuBar li:hover > a, ul#MenuBar li a.pressed {
+	background-color: #008000;
+	border-color: #C0C0C0;
+	border-style: solid;
+	color: #000000;
+	text-shadow: #FFF 0 0 1px;
+	background-image: url("mainbk.png");
+	background-position: 0 100px;
+	text-decoration: none;
+}
+ul#MenuBar span {
+	display: block;
+	overflow: visible;
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 0px;
+}
+ul#MenuBar ul li:hover > a, ul#MenuBar ul li a.pressed {
+	background-color: #00ff00;
+	background-image: none;
+	color: #000000;
+	text-decoration: none;
+}
+ul#MenuBar li.topfirst > a {
+	border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+}
+ul#MenuBar li.toplast > a {
+	border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
