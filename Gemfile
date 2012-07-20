@@ -14,4 +14,4 @@ gem 'jquery-rails'
 
 gem "bcrypt-ruby", :require => "bcrypt"
 
-
+gem "paperclip"
